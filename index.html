@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BackboneJs</title>
+    <link
+      rel="stylesheet"
+      href="bower_components/bootstrap/dist/css/bootstrap.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Backbone JS Bro</h1>
+      <table class="table">
+        <tr>
+          <th>Author</th>
+          <th>Title</th>
+          <th>URL</th>
+          <th>Action</th>
+        </tr>
+        <!-- template to add one view starts here -->
+        <tr>
+          <td><input type="text" class="form-control author-input"></td>
+          <td><input type="text" class="form-control title-input"></td>
+          <td><input type="text" class="form-control url-input"></td>
+          <td><button class="btn btn-primary add-blog">Add</button></td>
+      </tr>
+        <!-- template to add one view ends here -->
+
+        <thead>
+        <tbody class="blogs-list">
+        </tbody>  
+        </thead>
+      </table>
+    </div>
+
+    <!--  template for individual blog  starts here -->
+    <script type="text/template" class="blogs-list-template">
+      <td><span class="author"><%= author %></span></td>
+      <td><span class="title"><%= title %></span></td>
+      <td><span class="url"><%= url %></span></td>
+      <td>
+        <button class="btn btn-warning edit-blog">Edit</button>
+        <button class="btn btn-danger delete-blog">Delete</button>
+      </td>
+    </script>
+    <!--  template for individual blog  ends here -->
+
+  </body>
+  <!-- Browser components -->
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/underscore/underscore.js"></script>
+  <script src="bower_components/backbone/backbone.js"></script>
+  <script src="./script.js"></script>
+</html>
